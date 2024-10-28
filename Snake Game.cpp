@@ -109,10 +109,9 @@ void UpdateGame() {
 
     // Check for collision with tail
     for (int i = 0; i < snakeTailLen; i++) {
-        if (snakeTailX[i] == x && snakeTailY[i] == y + 1) //note it is y+1 due to visual aesthetic
-        {
-            isGameOver = true; // End the game on tail collision
-            break; // Exit loop on collision
+        if (snakeTailX[i] == x && snakeTailY[i] == y + 1) { // Note it is y+1 for aesthetic alignment
+            isGameOver = true;
+            break;
         }
     }
 
@@ -120,9 +119,10 @@ void UpdateGame() {
     if (x == fruitCordX && y == fruitCordY) {
         playerScore += 10;
 
-        // Generate new food coordinates
+        // Attempt to generate new food coordinates with a limited number of retries
         bool foodSpawned = false;
-        while (!foodSpawned) {
+        int maxAttempts = 100; // Limit the number of attempts to avoid infinite loop
+        for (int attempt = 0; attempt < maxAttempts && !foodSpawned; attempt++) {
             fruitCordX = rand() % (width - 1) + 1; // Ensure food is not on the wall
             fruitCordY = rand() % (height - 1) + 1; // Ensure food is not on the wall
 
@@ -130,19 +130,24 @@ void UpdateGame() {
             foodSpawned = true;
             for (int i = 0; i < snakeTailLen; i++) {
                 if (snakeTailX[i] == fruitCordX && snakeTailY[i] == fruitCordY) {
-                    foodSpawned = false; // Food overlaps with the snake, try again
+                    foodSpawned = false;
                     break;
                 }
             }
-
             // Also check if the food spawns on the head
             if (x == fruitCordX && y == fruitCordY) {
-                foodSpawned = false; // Food overlaps with the head, try again
+                foodSpawned = false;
             }
         }
 
+        // If maxAttempts reached without finding a spot, place food anywhere
+        if (!foodSpawned) {
+            fruitCordX = rand() % (width - 1) + 1;
+            fruitCordY = rand() % (height - 1) + 1;
+        }
+
         // Add a new segment to the end of the tail
-        snakeTailX[snakeTailLen] = prevX; // Position of the new segment at the previous head
+        snakeTailX[snakeTailLen] = prevX;
         snakeTailY[snakeTailLen] = prevY + 1; // Keep the tail visually aligned
         snakeTailLen++; // Increase the tail length
 
@@ -150,6 +155,7 @@ void UpdateGame() {
         dfc = max(50, dfc - 1000); // Increase speed, ensure it doesn't go below 50ms
     }
 }
+
 
 int SetDifficulty() {
     int choice;
