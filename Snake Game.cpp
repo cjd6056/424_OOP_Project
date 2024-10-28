@@ -1,7 +1,6 @@
 // AERSP 424 Final Project
 // Source: https://www.geeksforgeeks.org/snake-code-cpp/
 
-
 #include <conio.h>
 #include <iostream>
 #include <windows.h>
@@ -19,6 +18,7 @@ enum snakesDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 snakesDirection sDir; // Snake's direction
 bool isGameOver; // Game over state
 bool isPaused; // Game pause state
+int dfc; // Speed delay factor
 
 void GameInit() {
     isGameOver = false;
@@ -67,12 +67,8 @@ void GameRender(string playerName) {
     cout << playerName << "'s Score: " << playerScore << "    "; // Added spaces to clear any previous text
 }
 
-
-
-
 // Function for updating the game state
-void UpdateGame()
-{
+void UpdateGame() {
     // Save current head position
     int prevX = x;
     int prevY = y;
@@ -113,8 +109,7 @@ void UpdateGame()
 
     // Check for collision with tail
     for (int i = 0; i < snakeTailLen; i++) {
-        // Check if the head is overlapping with any tail segment
-        if (snakeTailX[i] == x && snakeTailY[i] == y+1) //note it is y+1 due to visual aesthetic
+        if (snakeTailX[i] == x && snakeTailY[i] == y + 1) //note it is y+1 due to visual aesthetic
         {
             isGameOver = true; // End the game on tail collision
             break; // Exit loop on collision
@@ -150,13 +145,14 @@ void UpdateGame()
         snakeTailX[snakeTailLen] = prevX; // Position of the new segment at the previous head
         snakeTailY[snakeTailLen] = prevY + 1; // Keep the tail visually aligned
         snakeTailLen++; // Increase the tail length
+
+        // Decrease the speed to make the snake faster
+        dfc = max(50, dfc - 1000); // Increase speed, ensure it doesn't go below 50ms
     }
 }
 
-
-
 int SetDifficulty() {
-    int dfc, choice;
+    int choice;
     cout << "\nSET DIFFICULTY\n1: Easy\n2: Medium\n3: Hard "
             "\nNOTE: if not chosen or pressed any other "
             "key, the difficulty will be automatically set "
@@ -164,16 +160,16 @@ int SetDifficulty() {
     cin >> choice;
     switch (choice) {
     case '1':
-        dfc = 200; // Easy
+        dfc = 150; // Easy
         break;
     case '2':
-        dfc = 250; // Medium
+        dfc = 100; // Medium
         break;
     case '3':
-        dfc = 300; // Hard
+        dfc = 50; // Hard
         break;
     default:
-        dfc = 250; // Default to medium
+        dfc = 100; // Default to medium
     }
     return dfc;
 }
@@ -215,7 +211,7 @@ int main() {
     cout << "Enter your name: ";
     cin >> playerName;
 
-    int dfc = SetDifficulty(); // Set difficulty
+    SetDifficulty(); // Set difficulty
     system("pause");
     system("cls");
 
@@ -234,10 +230,11 @@ int main() {
             cout << "Game Paused. Press 'p' to resume.      "; // Added spaces to clear any previous text
         }
 
-        Sleep(dfc/2); // Control the game speed based on difficulty
+        Sleep(dfc); // Control the game speed based on difficulty
     }
 
-    cout << "\nGame Over! Your Score: " << playerScore << endl;
-    system("pause"); // Waits for the user to press a key
+    cout << "\nGame Over! Your final score is: " << playerScore << endl;
+
+    system("pause"); // Wait before closing
     return 0;
 }
