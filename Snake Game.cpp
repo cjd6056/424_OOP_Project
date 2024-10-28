@@ -40,7 +40,7 @@ void GameRender(string playerName) {
             else if (j == 0 || j == width) // Side walls
                 cout << "|";
             else if (i == y + 1 && j == x) // Snake head
-                cout << "O";
+                cout << "0"; // Change head to '0'
             else if (i == fruitCordY + 1 && j == fruitCordX) // Food
                 cout << "#";
             else {
@@ -63,14 +63,15 @@ void GameRender(string playerName) {
     cout << playerName << "'s Score: " << playerScore << "    "; // Added spaces to clear any previous text
 }
 
-// Function for updating the game state
+
+
+
 // Function for updating the game state
 void UpdateGame()
 {
     // Save current head position
     int prevX = x;
     int prevY = y;
-    int prev2X, prev2Y;
 
     // Move the head according to the direction
     switch (sDir) {
@@ -89,18 +90,15 @@ void UpdateGame()
     }
 
     // Update each tail segment to follow the one before it
-    for (int i = 0; i < snakeTailLen; i++) {
-        prev2X = snakeTailX[i];
-        prev2Y = snakeTailY[i];
+    for (int i = snakeTailLen - 1; i > 0; i--) {
+        snakeTailX[i] = snakeTailX[i - 1];
+        snakeTailY[i] = snakeTailY[i - 1];
+    }
 
-        // Make each tail segment follow the one before it
-        if (i == 0) {
-            snakeTailX[i] = prevX;
-            snakeTailY[i] = prevY + 1; // Shift down one line
-        } else {
-            snakeTailX[i] = prev2X;
-            snakeTailY[i] = prev2Y;
-        }
+    // The first segment of the tail takes the previous position of the head but shifted down
+    if (snakeTailLen > 0) {
+        snakeTailX[0] = prevX; // The position of the first tail segment
+        snakeTailY[0] = prevY + 1; // Shift down one line for the tail
     }
 
     // Check for collision with walls
@@ -108,9 +106,12 @@ void UpdateGame()
         isGameOver = true;
 
     // Check for collision with tail
-    for (int i = 0; i < snakeTailLen; i++) {
-        if (snakeTailX[i] == x && snakeTailY[i] == y) {
-            isGameOver = true; // End the game on tail collision
+    if (snakeTailLen > 0) { // Only check for collision if there's at least one tail segment
+        for (int i = 0; i < snakeTailLen; i++) {
+            if (snakeTailX[i] == x && snakeTailY[i] == y) {
+                isGameOver = true; // End the game on tail collision
+                break; // Exit loop on collision
+            }
         }
     }
 
@@ -140,12 +141,11 @@ void UpdateGame()
         }
 
         // Add a new segment to the end of the tail
-        snakeTailX[snakeTailLen] = prevX;
-        snakeTailY[snakeTailLen] = prevY + 1; // Shift down one line
-        snakeTailLen++;
+        snakeTailX[snakeTailLen] = prevX; // Position of the new segment at the previous head
+        snakeTailY[snakeTailLen] = prevY + 1; // Keep the tail one line lower than the head
+        snakeTailLen++; // Increase the tail length
     }
 }
-
 
 
 int SetDifficulty() {
@@ -227,7 +227,7 @@ int main() {
             cout << "Game Paused. Press 'p' to resume.      "; // Added spaces to clear any previous text
         }
 
-        Sleep(dfc); // Control the game speed based on difficulty
+        Sleep(dfc/2); // Control the game speed based on difficulty
     }
 
     cout << "\nGame Over! Your Score: " << playerScore << endl;
