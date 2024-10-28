@@ -102,7 +102,7 @@ void UpdateGame()
     // The first segment of the tail takes the previous position of the head but shifted down
     if (snakeTailLen > 0) {
         snakeTailX[0] = prevX; // The position of the first tail segment
-        snakeTailY[0] = prevY + 1; // Shift down one line for the tail
+        snakeTailY[0] = prevY; // This LINE CAUSES PROBLEMS LOL
     }
 
     // Check for collision with walls
