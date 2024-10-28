@@ -1,3 +1,7 @@
+// AERSP 424 Final Project
+// Source: https://www.geeksforgeeks.org/snake-code-cpp/
+
+
 #include <conio.h>
 #include <iostream>
 #include <windows.h>
