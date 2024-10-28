@@ -99,23 +99,25 @@ void UpdateGame()
         snakeTailY[i] = snakeTailY[i - 1];
     }
 
-    // The first segment of the tail takes the previous position of the head but shifted down
+    // The first segment of the tail takes the previous position of the head,
+    // but keep it visually aligned below.
     if (snakeTailLen > 0) {
-        snakeTailX[0] = prevX; // The position of the first tail segment
-        snakeTailY[0] = prevY; // This LINE CAUSES PROBLEMS LOL
+        snakeTailX[0] = prevX; // Keep the tail aligned with the head horizontally
+        snakeTailY[0] = prevY + 1; // Shift down one line for the tail visually
     }
 
     // Check for collision with walls
-    if (x >= width || x < 0 || y >= height || y < 0)
+    if (x >= width || x < 0 || y >= height || y < 0) {
         isGameOver = true;
+    }
 
     // Check for collision with tail
-    if (snakeTailLen > 0) { // Only check for collision if there's at least one tail segment
-        for (int i = 0; i < snakeTailLen; i++) {
-            if (snakeTailX[i] == x && snakeTailY[i] == y) {
-                isGameOver = true; // End the game on tail collision
-                break; // Exit loop on collision
-            }
+    for (int i = 0; i < snakeTailLen; i++) {
+        // Check if the head is overlapping with any tail segment
+        if (snakeTailX[i] == x && snakeTailY[i] == y+1) //note it is y+1 due to visual aesthetic
+        {
+            isGameOver = true; // End the game on tail collision
+            break; // Exit loop on collision
         }
     }
 
@@ -126,8 +128,8 @@ void UpdateGame()
         // Generate new food coordinates
         bool foodSpawned = false;
         while (!foodSpawned) {
-            fruitCordX = rand() % width;
-            fruitCordY = rand() % height;
+            fruitCordX = rand() % (width - 1) + 1; // Ensure food is not on the wall
+            fruitCordY = rand() % (height - 1) + 1; // Ensure food is not on the wall
 
             // Check if the new food position overlaps with the snake
             foodSpawned = true;
@@ -146,10 +148,11 @@ void UpdateGame()
 
         // Add a new segment to the end of the tail
         snakeTailX[snakeTailLen] = prevX; // Position of the new segment at the previous head
-        snakeTailY[snakeTailLen] = prevY + 1; // Keep the tail one line lower than the head
+        snakeTailY[snakeTailLen] = prevY + 1; // Keep the tail visually aligned
         snakeTailLen++; // Increase the tail length
     }
 }
+
 
 
 int SetDifficulty() {
@@ -161,16 +164,16 @@ int SetDifficulty() {
     cin >> choice;
     switch (choice) {
     case '1':
-        dfc = 50; // Easy
+        dfc = 100; // Easy
         break;
     case '2':
-        dfc = 100; // Medium
+        dfc = 150; // Medium
         break;
     case '3':
-        dfc = 150; // Hard
+        dfc = 200; // Hard
         break;
     default:
-        dfc = 100; // Default to medium
+        dfc = 150; // Default to medium
     }
     return dfc;
 }
@@ -231,7 +234,7 @@ int main() {
             cout << "Game Paused. Press 'p' to resume.      "; // Added spaces to clear any previous text
         }
 
-        Sleep(dfc/2); // Control the game speed based on difficulty
+        Sleep(dfc); // Control the game speed based on difficulty
     }
 
     cout << "\nGame Over! Your Score: " << playerScore << endl;
