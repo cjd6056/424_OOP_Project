@@ -1,4 +1,9 @@
-// AERSP 424 Final Project
+/*
+AERSP 424 Final Project
+Authors: Conor and Gabrielle Dowdell
+Sources: https://www.geeksforgeeks.org/snake-code-cpp/
+*/ 
+
 #include <conio.h>
 #include <iostream>
 #include <windows.h>
