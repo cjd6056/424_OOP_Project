@@ -164,16 +164,16 @@ int SetDifficulty() {
     cin >> choice;
     switch (choice) {
     case '1':
-        dfc = 100; // Easy
+        dfc = 200; // Easy
         break;
     case '2':
-        dfc = 150; // Medium
+        dfc = 250; // Medium
         break;
     case '3':
-        dfc = 200; // Hard
+        dfc = 300; // Hard
         break;
     default:
-        dfc = 150; // Default to medium
+        dfc = 250; // Default to medium
     }
     return dfc;
 }
@@ -234,7 +234,7 @@ int main() {
             cout << "Game Paused. Press 'p' to resume.      "; // Added spaces to clear any previous text
         }
 
-        Sleep(dfc); // Control the game speed based on difficulty
+        Sleep(dfc/2); // Control the game speed based on difficulty
     }
 
     cout << "\nGame Over! Your Score: " << playerScore << endl;
