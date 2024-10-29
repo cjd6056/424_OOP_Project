@@ -24,7 +24,7 @@ enum snakesDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 snakesDirection sDir; // Snake's direction
 bool isGameOver; // Game over state
 bool isPaused; // Game pause state
-int dfc; // Speed delay factor
+int speed_delay; // Speed delay factor
 
 void GameInit() {
     isGameOver = false;
@@ -127,7 +127,6 @@ void UpdateGame() {
         snakeTailY[snakeTailLen] = prevY + 1;
         snakeTailLen++;
 
-        dfc = max(50, dfc - 1000);
     }
 }
 
@@ -139,12 +138,12 @@ int SetDifficulty() {
             "to medium\nChoose difficulty level: ";
     cin >> choice;
     switch (choice) {
-    case '1': dfc = 150; break;
-    case '2': dfc = 100; break;
-    case '3': dfc = 50; break;
-    default: dfc = 100;
+    case '1': speed_delay = 150; break;
+    case '2': speed_delay = 100; break;
+    case '3': speed_delay = 50; break;
+    default: speed_delay = 100;
     }
-    return dfc;
+    return speed_delay;
 }
 
 void UserInput() {
@@ -201,14 +200,13 @@ int main() {
                 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pauseCoord);
                 cout << "Game Paused. Press 'p' to resume.      ";
             }
-            Sleep(dfc);
         }
-
         highScore = max(highScore, playerScore);
         cout << "\nGame Over! Your final score is: " << playerScore;
         cout << "\nHigh Score: " << highScore << endl;
 
-    } while (PlayAgain());
+    } 
+    while (PlayAgain());
 
     return 0;
 }
