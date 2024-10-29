@@ -10,6 +10,7 @@ Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
 #include <windows.h>
 #include <algorithm> // for max function
 #include <cstring>   // for memset
+#include <limits>    // for std::numeric_limits
 using namespace std;
 
 const int width = 60; // Width of the game area
@@ -139,16 +140,32 @@ int SetDifficulty()
             "\nNOTE: if not chosen or pressed any other "
             "key, the difficulty will be automatically set "
             "to medium\nChoose difficulty level: ";
+    
+    // Read input as integer
     cin >> choice;
+
+    // Check if the input was successful
+    if (cin.fail()) {
+        // If input failed, clear the error flag and ignore the rest of the input
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        choice = 0; // Default case
+    }
+
     switch (choice) 
     {
-    case '1': speed_delay = 500; break; // values are in ms
-    case '2': speed_delay = 250; break;
-    case '3': speed_delay = 10; break;
-    default: speed_delay = 100;
+    case 1: speed_delay = 100; break; // Easy
+    case 2: speed_delay = 50; break; // Medium
+    case 3: speed_delay = 10; break; // Hard (very fast)
+    default: speed_delay = 50; break; // Default to Medium
     }
+
+    cout << "Speed Delay: " << speed_delay << " ms" << endl; // Debug output
     return speed_delay;
 }
+
+
+
 
 void UserInput() {
     while (_kbhit()) {
