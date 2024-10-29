@@ -27,6 +27,7 @@ snakesDirection sDir; // Snake's direction
 bool isGameOver; // Game over state
 bool isPaused; // Game pause state
 int speed_delay; // Speed delay factor
+bool funMode = false; // Flag for Fun Mode
 
 void GameInit() {
     isGameOver = false;
@@ -85,6 +86,18 @@ void UpdateGame() {
         case DOWN: y++; break;
     }
 
+    // Wrap around logic for Fun Mode
+    if (funMode) {
+        if (x >= width) x = 0;        // Wrap around from right to left
+        else if (x < 0) x = width - 1; // Wrap around from left to right
+        if (y >= height) y = 0;      // Wrap around from bottom to top
+        else if (y < 0) y = height - 1; // Wrap around from top to bottom
+    } else {
+        // Check for collision with walls (game area bounds)
+        if (x >= width || x < 0 || y >= height || y < 0)
+            isGameOver = true;
+    }
+
     // Update tail coordinates
     for (int i = snakeTailLen - 1; i > 0; i--) {
         snakeTailX[i] = snakeTailX[i - 1];
@@ -92,17 +105,13 @@ void UpdateGame() {
     }
     if (snakeTailLen > 0) {
         snakeTailX[0] = prevX;
-        snakeTailY[0] = prevY+1; //needs to be y+1 for appearance of following head!
+        snakeTailY[0] = prevY + 1; //needs to be y+1 for appearance of following head!
     }
-
-    // Check for collision with walls (game area bounds)
-    if (x >= width || x < 0 || y >= height || y < 0)
-        isGameOver = true;
 
     // Check for collision with the snake's own tail
     for (int i = 0; i < snakeTailLen; i++) 
     {
-        if (snakeTailX[i] == x && snakeTailY[i] == y+1) //needs to be y+1 for appearance of following head
+        if (snakeTailX[i] == x && snakeTailY[i] == y + 1) //needs to be y+1 for appearance of following head
         {
             isGameOver = true;
             break;
@@ -133,10 +142,9 @@ void UpdateGame() {
     }
 }
 
-int SetDifficulty()
-{
+int SetDifficulty() {
     int choice;
-    cout << "\nSET DIFFICULTY\n1: Easy\n2: Medium\n3: Hard "
+    cout << "\nSET DIFFICULTY\n1: Easy\n2: Medium\n3: Hard\n4: Fun Mode "
             "\nNOTE: if not chosen or pressed any other "
             "key, the difficulty will be automatically set "
             "to medium\nChoose difficulty level: ";
@@ -157,15 +165,13 @@ int SetDifficulty()
     case 1: speed_delay = 100; break; // Easy
     case 2: speed_delay = 50; break; // Medium
     case 3: speed_delay = 10; break; // Hard (very fast)
+    case 4: funMode = true; speed_delay = 50; break; // Fun Mode
     default: speed_delay = 50; break; // Default to Medium
     }
 
     cout << "Speed Delay: " << speed_delay << " ms" << endl; // Debug output
     return speed_delay;
 }
-
-
-
 
 void UserInput() {
     while (_kbhit()) {
@@ -196,7 +202,7 @@ int main() {
     SetConsoleScreenBufferSize(hConsole, bufferSize);
 
     string playerName;
-    cout << "Enter your name: ";
+    cout << "Please enter your name: ";
     cin >> playerName;
 
     do {
