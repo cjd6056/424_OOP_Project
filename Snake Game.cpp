@@ -2,6 +2,7 @@
 AERSP 424 Final Project
 Authors: Conor and Gabrielle Dowdell
 Sources: https://www.geeksforgeeks.org/snake-code-cpp/
+Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
 */ 
 
 #include <conio.h>
@@ -38,7 +39,8 @@ void GameInit() {
 }
 
 void GameRender(string playerName) {
-    system("cls");
+    //system("cls");
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),{0,0});
 
     // Draw the game area
     for (int i = 0; i < height + 2; i++) {
@@ -181,6 +183,12 @@ int main() {
         SetDifficulty();
         system("pause");
         system("cls");
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),{0,0}); //Code I found in a comment section... Removes Flickering effect
+        CONSOLE_CURSOR_INFO info; // This gets rid of the random cursors all over the screen. Super helpful!!!
+        info.dwSize = 100;
+        info.bVisible = false;
+        SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE),&info);
+
 
         GameInit();
         while (!isGameOver) {
