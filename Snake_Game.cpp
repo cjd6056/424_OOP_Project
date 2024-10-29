@@ -4,7 +4,6 @@ Authors: Conor and Gabrielle Dowdell
 Sources: https://www.geeksforgeeks.org/snake-code-cpp/
 Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
 */ 
-
 #include <conio.h>
 #include <iostream>
 #include <windows.h>
@@ -28,6 +27,7 @@ bool isGameOver; // Game over state
 bool isPaused; // Game pause state
 int speed_delay; // Speed delay factor
 bool funMode = false; // Flag for Fun Mode
+int lives; // Number of lives left
 
 void GameInit() {
     isGameOver = false;
@@ -72,7 +72,7 @@ void GameRender(string playerName) {
         }
         cout << endl;
     }
-    cout << playerName << "'s Score: " << playerScore << "    ";
+    cout << playerName << "'s Score: " << playerScore << " | Lives: " << lives << " | High Score: " << highScore << "    ";
 }
 
 void UpdateGame() {
@@ -94,8 +94,15 @@ void UpdateGame() {
         else if (y < 0) y = height - 1; // Wrap around from top to bottom
     } else {
         // Check for collision with walls (game area bounds)
-        if (x >= width || x < 0 || y >= height || y < 0)
-            isGameOver = true;
+        if (x >= width || x < 0 || y >= height || y < 0) {
+            lives--; // Decrease lives if out of bounds
+            if (lives <= 0) {
+                isGameOver = true; // Set game over if no lives left
+            } else {
+                GameInit(); // Restart game for the player to try again
+            }
+            return; // Exit the function to prevent further checks
+        }
     }
 
     // Update tail coordinates
@@ -113,8 +120,13 @@ void UpdateGame() {
     {
         if (snakeTailX[i] == x && snakeTailY[i] == y + 1) //needs to be y+1 for appearance of following head
         {
-            isGameOver = true;
-            break;
+            lives--; // Decrease lives if collided with tail
+            if (lives <= 0) {
+                isGameOver = true; // Set game over if no lives left
+            } else {
+                GameInit(); // Restart game for the player to try again
+            }
+            return; // Exit the function to prevent further checks
         }
     }
 
@@ -196,16 +208,20 @@ bool PlayAgain() {
 int main() {
     srand(static_cast<unsigned int>(time(0)));
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    SMALL_RECT windowSize = { 0, 0, width + 1, height + 2 };
+    SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(width), static_cast<SHORT>(height) };
     SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
-    COORD bufferSize = { width + 2, height + 3 };
+    COORD bufferSize = { static_cast<SHORT>(width), static_cast<SHORT>(height) };
     SetConsoleScreenBufferSize(hConsole, bufferSize);
 
     string playerName;
-    cout << "Please enter your name: ";
+    
+    cout << "Welcome to Snake. Good luck!\n"; // Welcome message
+    cout << "Enter your name: ";
     cin >> playerName;
 
     do {
+        lives = 3; // Reset lives
+        GameInit();
         SetDifficulty();
         system("pause");
         system("cls");
@@ -215,7 +231,6 @@ int main() {
         info.bVisible = false;
         SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 
-        GameInit();
         while (!isGameOver) {
             UserInput();
             if (!isPaused) {
@@ -228,7 +243,21 @@ int main() {
                 cout << "Game Paused. Press 'p' to resume.      ";
             }
         }
-        highScore = max(highScore, playerScore);
+
+        // Check if the game ended due to running out of lives
+        if (lives <= 0) {
+            cout << "\nGoodbye Cruel World! Press any key to continue...";
+            _getch(); // Wait for user input before resetting scores and modes
+            playerScore = 0; // Reset scores
+            funMode = false; // Reset Fun Mode flag
+            lives = 3; // Reset lives
+        }
+
+        // Update the high score if the player score is higher
+        if (playerScore > highScore) {
+            highScore = playerScore; // Keep the highest score
+        }
+
         cout << "\nGame Over! Your final score is: " << playerScore;
         cout << "\nHigh Score: " << highScore << endl;
 
