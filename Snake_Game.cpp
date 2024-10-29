@@ -73,6 +73,7 @@ void GameRender(string playerName) {
 void UpdateGame() {
     int prevX = x, prevY = y;
 
+    // Move snake in the current direction
     switch (sDir) {
         case LEFT: x--; break;
         case RIGHT: x++; break;
@@ -80,55 +81,63 @@ void UpdateGame() {
         case DOWN: y++; break;
     }
 
+    // Update tail coordinates
     for (int i = snakeTailLen - 1; i > 0; i--) {
         snakeTailX[i] = snakeTailX[i - 1];
         snakeTailY[i] = snakeTailY[i - 1];
     }
     if (snakeTailLen > 0) {
         snakeTailX[0] = prevX;
-        snakeTailY[0] = prevY + 1;
+        snakeTailY[0] = prevY;
     }
 
+    // Check for collision with walls (game area bounds)
     if (x >= width || x < 0 || y >= height || y < 0)
         isGameOver = true;
 
+    // Check for collision with the snake's own tail
     for (int i = 0; i < snakeTailLen; i++) {
-        if (snakeTailX[i] == x && snakeTailY[i] == y + 1) {
+        if (snakeTailX[i] == x && snakeTailY[i] == y) {
             isGameOver = true;
             break;
         }
     }
 
+    // Check if snake eats the fruit
     if (x == fruitCordX && y == fruitCordY) {
         playerScore += 10;
 
-        bool foodSpawned = false;
-        int maxAttempts = 100;
-        for (int attempt = 0; attempt < maxAttempts && !foodSpawned; attempt++) {
-            fruitCordX = rand() % (width - 1) + 1;
-            fruitCordY = rand() % (height - 1) + 1;
+        // Generate a new position for the fruit within bounds, avoiding the walls
+bool foodSpawned = false;
+int maxAttempts = 100;
+for (int attempt = 0; attempt < maxAttempts && !foodSpawned; attempt++) {
+    // Generate coordinates inside the game area boundaries
+    fruitCordX = rand() % (width - 2) + 1;
+    fruitCordY = rand() % (height - 2) + 1;
 
-            foodSpawned = true;
-            for (int i = 0; i < snakeTailLen; i++) {
-                if (snakeTailX[i] == fruitCordX && snakeTailY[i] == fruitCordY) {
-                    foodSpawned = false;
-                    break;
-                }
-            }
-            if (x == fruitCordX && y == fruitCordY)
-                foodSpawned = false;
+    // Ensure the new fruit position does not overlap with the snake tail
+    foodSpawned = true;
+    for (int i = 0; i < snakeTailLen; i++) {
+        if (snakeTailX[i] == fruitCordX && snakeTailY[i] == fruitCordY) {
+            foodSpawned = false;
+            break;
         }
-        if (!foodSpawned) {
-            fruitCordX = rand() % (width - 1) + 1;
-            fruitCordY = rand() % (height - 1) + 1;
-        }
+    }
 
-        snakeTailX[snakeTailLen] = prevX;
-        snakeTailY[snakeTailLen] = prevY + 1;
-        snakeTailLen++;
+    // Double-check to avoid placing fruit outside the wall boundaries
+    if (fruitCordX <= 0 || fruitCordX >= width - 1 || fruitCordY <= 0 || fruitCordY >= height - 1)
+        foodSpawned = false;
+}
+
+// As a backup, if maxAttempts failed, default to safe values
+if (!foodSpawned) {
+    fruitCordX = rand() % (width - 2) + 1;
+    fruitCordY = rand() % (height - 2) + 1;
+}
 
     }
 }
+
 
 int SetDifficulty() {
     int choice;
@@ -167,7 +176,7 @@ bool PlayAgain() {
 }
 
 int main() {
-    srand(time(0));
+srand(static_cast<unsigned int>(time(0)));
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SMALL_RECT windowSize = { 0, 0, width + 1, height + 2 };
     SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
