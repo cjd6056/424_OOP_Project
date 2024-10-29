@@ -233,11 +233,20 @@ int main() {
 
         while (!isGameOver) {
             UserInput();
-            if (!isPaused) {
+            if (!isPaused) 
+            {
                 UpdateGame();
                 GameRender(playerName);
                 Sleep(speed_delay); // Control the speed of the game
-            } else {
+                // This should be immediately after the game loop.
+            if (playerScore > highScore)
+                {
+                highScore = playerScore; // Update high score if current score is higher
+                } 
+            }
+            
+            else 
+            {
                 COORD pauseCoord = { 0, (short)(height + 1) };
                 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pauseCoord);
                 cout << "Game Paused. Press 'p' to resume.      ";
@@ -261,7 +270,8 @@ int main() {
         cout << "\nGame Over! Your final score is: " << playerScore;
         cout << "\nHigh Score: " << highScore << endl;
 
-    } while (PlayAgain());
+    } 
+    while (PlayAgain());
 
     return 0;
 }
