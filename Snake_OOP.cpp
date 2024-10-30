@@ -3,6 +3,13 @@ AERSP 424 Final Project
 Authors: Conor Dowdell, Gabrielle Dowdell, Shanon Hyde
 Sources: https://www.geeksforgeeks.org/snake-code-cpp/
 Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
+
+OOP style: 3 main classes
+{ 
+1. Snake
+2. Fruit
+3. Game
+}
 */ 
 
 #include <conio.h>
