@@ -1,6 +1,6 @@
 /*
 AERSP 424 Final Project
-Authors: Conor and Gabrielle Dowdell
+Authors: Conor Dowdell, Gabrielle Dowdell, Shanon Hyde
 Sources: https://www.geeksforgeeks.org/snake-code-cpp/
 Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
 */ 
