@@ -1,3 +1,4 @@
+
 /*
 AERSP 424 Final Project
 Authors: Conor Dowdell, Gabrielle Dowdell, Shanon Hyde
@@ -14,7 +15,8 @@ OOP style: 3 main classes
 
 #include <conio.h>
 #include <iostream>
-#include <windows.h>
+#define NOMINMAX // to help with min and max errors via windows.h
+#include <windows.h> //Windows API
 #include <algorithm>
 #include <cstring>
 #include <limits>

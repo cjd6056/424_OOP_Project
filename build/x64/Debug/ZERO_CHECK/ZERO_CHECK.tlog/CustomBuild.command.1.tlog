@@ -1,0 +1,10 @@
+^C:\USERS\CONOR.CONORS-XPS-15\ONEDRIVE\DESKTOP\REPOS\424_OOP_PROJECT\BUILD\CMAKEFILES\63BAB95AF1B08E4A3A9C029DE1E25BB3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project -BC:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build/AERSP_424_Final_Project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
