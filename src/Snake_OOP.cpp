@@ -14,8 +14,10 @@ OOP style: 3 main classes
 */ 
 
 #include <conio.h>
-#include <iostream>
 #include <windows.h> //Windows API
+
+
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 #include <limits>
