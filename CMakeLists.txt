@@ -20,11 +20,6 @@ file(GLOB all_SRCS
 # Define the executable
 add_executable(${CMAKE_PROJECT_NAME} ${all_SRCS})
 
-# Link against Windows libraries if necessary
-if(WIN32)
-    target_link_libraries(${PROJECT_NAME} PRIVATE user32 kernel32)
-endif()
-
 # Enable debugging symbols for development builds
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_compile_definitions(DEBUG)
