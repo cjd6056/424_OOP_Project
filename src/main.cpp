@@ -5,11 +5,11 @@ Authors: Conor Dowdell, Gabrielle Dowdell, Shanon Hyde
 Sources: https://www.geeksforgeeks.org/snake-code-cpp/
 Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
 
-OOP style: 3 main classes
+OOP style: 3 main classes divided into their own header and cpp files (what vs. how)
 { 
-1. Snake
-2. Fruit
-3. Game
+    1. Snake
+    2. Fruit
+    3. Game
 }
 */ 
 
