@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Snake_OOP.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Snake_OOP.cpp",
+  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Snake_OOP.cpp",
+  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Snake_OOP.cpp.obj"
+}
+]
