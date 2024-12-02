@@ -8,7 +8,14 @@
 
 using namespace std;
 
-Game::Game(int* gamesPtr) : highScore(0), lives(3), isGameOver(false), isPaused(false), funMode(false), speedDelay(50), gamesPlayed(gamesPtr) {}
+Game::Game(int* gamesPlayed) : highScore(0), lives(3), isGameOver(false), isPaused(false), funMode(false), speedDelay(50), gamesPlayed(gamesPlayed) 
+{
+    // Initialize gamesPlayed to 0 if not already
+    if (*gamesPlayed == 0) 
+    {
+        *gamesPlayed = 0;
+    }
+}
 
 void Game::init() 
 {
@@ -46,10 +53,7 @@ void Game::render()
         }
         cout << endl;
     }
-
-    // Display the score, high score, and the number of games played below the arena
-    cout << playerName << "'s Score: " << score << " | Lives: " << lives << " | High Score: " << highScore 
-         << " | Games Played: " << *gamesPlayed << "    ";  // Display games played
+    cout << playerName << "'s Score: " << score << " | Lives: " << lives << " | High Score: " << highScore << " | Games Played: " << *gamesPlayed << "    ";
 }
 
 void Game::setDifficulty() 
@@ -135,8 +139,6 @@ void Game::play()
 
     do 
     {
-        incrementGamesPlayed();  // Increment game count before starting each game
-
         lives = 3;
         init();
         setDifficulty();
@@ -177,6 +179,10 @@ void Game::play()
 
         cout << "\nGame Over! Your final score is: " << score;
         cout << "\nHigh Score: " << highScore << endl;
+
+        // Increment games played after each game finishes
+        (*gamesPlayed)++;
+
     } 
     while (playAgain());
 }
@@ -187,9 +193,4 @@ bool Game::playAgain()
     cout << "\nPlay Again? (Y/N): ";
     cin >> choice;
     return choice == 'Y' || choice == 'y';
-}
-
-void Game::incrementGamesPlayed() 
-{
-    (*gamesPlayed)++;  // Dereference the pointer to increment the count
 }
