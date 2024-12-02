@@ -52,3 +52,4 @@ void Snake::grow()
 {
     tailLen++;
 }
+

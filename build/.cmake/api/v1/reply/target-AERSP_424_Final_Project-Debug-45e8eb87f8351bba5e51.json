@@ -29,19 +29,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 21,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 8,
+				"line" : 19,
 				"parent" : 0
 			}
 		]
@@ -60,16 +66,20 @@
 				{
 					"backtrace" : 2,
 					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_USE_MATH_DEFINES"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src"
 				}
 			],
