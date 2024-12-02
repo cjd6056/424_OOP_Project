@@ -1,6 +1,6 @@
 #include "Fruit.h"
+#include "Snake.h"
 #include <cstdlib>
-#include <Snake.h>
 
 Fruit::Fruit() 
 {

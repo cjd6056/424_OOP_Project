@@ -15,19 +15,7 @@ OOP style: 3 main classes divided into their own header and cpp files (what vs. 
 
 #include <conio.h>
 #include <windows.h> //Windows API
-#include <Game.h>
-
-
-#include <iostream>
-#include <algorithm>
-#include <cstring>
-#include <limits>
-#include <string>
-using namespace std;
-
-#include <conio.h>
-#include <windows.h> //Windows API
-#include <Game.h>
+#include "Game.h"
 #include <iostream>
 #include <algorithm>
 #include <cstring>

@@ -7,3 +7,7 @@ How to run:
 3. Open 424_OOP_Project/Build and run "AERSP_424_Final_Project.exe"
 
 Note: If issues arise, try 424_OOP_Project/Build/Debug and run "AERSP_424_Final_Project.exe"
+
+Sources: https://www.geeksforgeeks.org/snake-code-cpp/
+
+Video: https://www.youtube.com/watch?v=E_-lMZDi7Uw
