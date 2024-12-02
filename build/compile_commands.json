@@ -1,8 +1,26 @@
 [
 {
   "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Snake_OOP.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Snake_OOP.cpp",
-  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Snake_OOP.cpp",
-  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Snake_OOP.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Fruit.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Fruit.cpp",
+  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fruit.cpp",
+  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj"
+},
+{
+  "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Game.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Game.cpp",
+  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp",
+  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj"
+},
+{
+  "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Snake.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Snake.cpp",
+  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Snake.cpp",
+  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj"
+},
+{
+  "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\main.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\main.cpp",
+  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/main.cpp",
+  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj"
 }
 ]

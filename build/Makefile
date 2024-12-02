@@ -128,29 +128,101 @@ AERSP_424_Final_Project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/build
 .PHONY : AERSP_424_Final_Project/fast
 
-src/Snake_OOP.obj: src/Snake_OOP.cpp.obj
-.PHONY : src/Snake_OOP.obj
+src/Fruit.obj: src/Fruit.cpp.obj
+.PHONY : src/Fruit.obj
 
 # target to build an object file
-src/Snake_OOP.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Snake_OOP.cpp.obj
-.PHONY : src/Snake_OOP.cpp.obj
+src/Fruit.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj
+.PHONY : src/Fruit.cpp.obj
 
-src/Snake_OOP.i: src/Snake_OOP.cpp.i
-.PHONY : src/Snake_OOP.i
+src/Fruit.i: src/Fruit.cpp.i
+.PHONY : src/Fruit.i
 
 # target to preprocess a source file
-src/Snake_OOP.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Snake_OOP.cpp.i
-.PHONY : src/Snake_OOP.cpp.i
+src/Fruit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.i
+.PHONY : src/Fruit.cpp.i
 
-src/Snake_OOP.s: src/Snake_OOP.cpp.s
-.PHONY : src/Snake_OOP.s
+src/Fruit.s: src/Fruit.cpp.s
+.PHONY : src/Fruit.s
 
 # target to generate assembly for a file
-src/Snake_OOP.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Snake_OOP.cpp.s
-.PHONY : src/Snake_OOP.cpp.s
+src/Fruit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.s
+.PHONY : src/Fruit.cpp.s
+
+src/Game.obj: src/Game.cpp.obj
+.PHONY : src/Game.obj
+
+# target to build an object file
+src/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj
+.PHONY : src/Game.cpp.obj
+
+src/Game.i: src/Game.cpp.i
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
+src/Snake.obj: src/Snake.cpp.obj
+.PHONY : src/Snake.obj
+
+# target to build an object file
+src/Snake.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj
+.PHONY : src/Snake.cpp.obj
+
+src/Snake.i: src/Snake.cpp.i
+.PHONY : src/Snake.i
+
+# target to preprocess a source file
+src/Snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.i
+.PHONY : src/Snake.cpp.i
+
+src/Snake.s: src/Snake.cpp.s
+.PHONY : src/Snake.s
+
+# target to generate assembly for a file
+src/Snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.s
+.PHONY : src/Snake.cpp.s
+
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -161,9 +233,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AERSP_424_Final_Project
-	@echo ... src/Snake_OOP.obj
-	@echo ... src/Snake_OOP.i
-	@echo ... src/Snake_OOP.s
+	@echo ... src/Fruit.obj
+	@echo ... src/Fruit.i
+	@echo ... src/Fruit.s
+	@echo ... src/Game.obj
+	@echo ... src/Game.i
+	@echo ... src/Game.s
+	@echo ... src/Snake.obj
+	@echo ... src/Snake.i
+	@echo ... src/Snake.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 
