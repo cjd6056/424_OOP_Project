@@ -14,9 +14,10 @@ private:
     bool isGameOver, isPaused, funMode;
     int speedDelay;
     std::string playerName;
+    int* gamesPlayed;  // Pointer to track the number of games played
 
 public:
-    Game();
+    Game(int* gamesPtr);  // Constructor with pointer to gamesPlayed
     void init();
     void render();
     void setDifficulty();
@@ -24,6 +25,7 @@ public:
     void update();
     void play();
     bool playAgain();
+    void incrementGamesPlayed();  // Function to update games played
 };
 
 #endif // GAME_H

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Game::Game() : highScore(0), lives(3), isGameOver(false), isPaused(false), funMode(false), speedDelay(50) {}
+Game::Game(int* gamesPtr) : highScore(0), lives(3), isGameOver(false), isPaused(false), funMode(false), speedDelay(50), gamesPlayed(gamesPtr) {}
 
 void Game::init() 
 {
@@ -46,7 +46,10 @@ void Game::render()
         }
         cout << endl;
     }
-    cout << playerName << "'s Score: " << score << " | Lives: " << lives << " | High Score: " << highScore << "    ";
+
+    // Display the score, high score, and the number of games played below the arena
+    cout << playerName << "'s Score: " << score << " | Lives: " << lives << " | High Score: " << highScore 
+         << " | Games Played: " << *gamesPlayed << "    ";  // Display games played
 }
 
 void Game::setDifficulty() 
@@ -132,6 +135,8 @@ void Game::play()
 
     do 
     {
+        incrementGamesPlayed();  // Increment game count before starting each game
+
         lives = 3;
         init();
         setDifficulty();
@@ -182,4 +187,9 @@ bool Game::playAgain()
     cout << "\nPlay Again? (Y/N): ";
     cin >> choice;
     return choice == 'Y' || choice == 'y';
+}
+
+void Game::incrementGamesPlayed() 
+{
+    (*gamesPlayed)++;  // Dereference the pointer to increment the count
 }
