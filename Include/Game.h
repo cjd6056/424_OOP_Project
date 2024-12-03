@@ -2,14 +2,14 @@
 #define GAME_H
 
 #include "Snake.h"
-#include "Fruit.h"
+#include "Fuel.h"
 #include <string>
 
 class Game 
 {
 private:
     Snake snake;
-    Fruit fruit;
+    Fuel Fuel;
     int score, highScore, lives;
     bool isGameOver, isPaused, funMode;
     int speedDelay;

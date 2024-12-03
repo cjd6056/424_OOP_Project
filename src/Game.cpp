@@ -22,7 +22,7 @@ void Game::init()
     isGameOver = false;
     isPaused = false;
     snake.reset();
-    fruit.spawn();
+    Fuel.spawn();
     score = 0;
 }
 
@@ -36,7 +36,7 @@ void Game::render()
             if (i == 0 || i == height + 1) cout << "-";
             else if (j == 0 || j == width) cout << "|";
             else if (i == snake.y + 1 && j == snake.x) cout << "0";
-            else if (i == fruit.y + 1 && j == fruit.x) cout << "#";
+            else if (i == Fuel.y + 1 && j == Fuel.x) cout << "#";
             else 
             {
                 bool prTail = false;
@@ -124,11 +124,11 @@ void Game::update()
         return;
     }
 
-    if (snake.x == fruit.x && snake.y == fruit.y) 
+    if (snake.x == Fuel.x && snake.y == Fuel.y) 
     {
         score += 10;
         snake.grow();
-        fruit.spawn();
+        Fuel.spawn();
     }
 }
 

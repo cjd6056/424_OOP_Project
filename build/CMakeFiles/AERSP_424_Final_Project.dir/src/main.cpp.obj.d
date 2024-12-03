@@ -236,7 +236,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: \
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/Snake.h \
  C:/msys64/ucrt64/include/c++/14.1.0/cstring \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/version.h \
- C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/Fruit.h \
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/Fuel.h \
  C:/msys64/ucrt64/include/c++/14.1.0/utility \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_relops.h \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_pair.h \
