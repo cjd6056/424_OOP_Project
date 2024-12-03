@@ -54,6 +54,8 @@ void Game::render()
         cout << endl;
     }
     cout << playerName << "'s Score: " << score << " | Lives: " << lives << " | High Score: " << highScore << " | Games Played: " << *gamesPlayed << "    ";
+    cout << "\nPress 'X' to exit or press 'P' to pause";
+
 }
 
 void Game::setDifficulty() 
