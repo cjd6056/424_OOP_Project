@@ -172,12 +172,14 @@ void Game::play()
         {
             cout << "\n\nGoodbye Cruel World! Press any key to continue...\n";
             _getch();
+                if (score > highScore) highScore = score; // Update high score before resetting score
+                cout << "\nGame Over! Your last score was: " << score;
             score = 0;
             funMode = false;
             lives = 3;
         }
 
-        cout << "\nGame Over! Your final score is: " << score;
+        
         cout << "\nHigh Score: " << highScore << endl;
 
         // Increment games played after each game finishes
