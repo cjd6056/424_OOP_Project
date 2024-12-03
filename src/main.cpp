@@ -39,6 +39,7 @@ int main()
     // Pass the address of gamesPlayed to the Game constructor
     Game game(&gamesPlayed);
     game.play();
+    
     return 0;
 }
 
