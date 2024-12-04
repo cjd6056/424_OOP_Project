@@ -69,6 +69,8 @@ void Game::setDifficulty()
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // Log invalid input
+        logError("Invalid difficulty selection. User entered a non-numeric value.");
         choice = 0;
     }
 
@@ -78,7 +80,11 @@ void Game::setDifficulty()
         case 2: speedDelay = 50; break;
         case 3: speedDelay = 10; break;
         case 4: funMode = true; speedDelay = 50; break;
-        default: speedDelay = 50; break;
+        default: 
+        logError("Invalid difficulty selection. User entered: " + std::to_string(choice));
+            speedDelay = 50;  // Default speed
+            break;
+        speedDelay = 50; break;
     }
     cout << "Speed Delay: " << speedDelay << " ms" << endl;
 }
@@ -199,7 +205,6 @@ void Game::play()
     while (playAgain());
 }
 
-
 void Game::saveHighScore() 
 {
     // Check if a high score file already exists and read the previous high score
@@ -230,6 +235,16 @@ void Game::saveHighScore()
             outFile << "High Score: " << highScore <<  "\tUser: " << playerName << "\n";
             outFile.close();
         }
+    }
+}
+
+void Game::logError(const std::string& message) 
+{
+    std::ofstream logFile("Error_Logging_File.txt", std::ios::app);
+    if (logFile) 
+    {
+        logFile << "ERROR: " << message << " | Timestamp: " << __DATE__ << " " << __TIME__ << "\n";
+        logFile.close();
     }
 }
 

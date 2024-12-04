@@ -27,6 +27,7 @@ public:
     bool playAgain();
     void incrementGamesPlayed();  // Function to update games played
     void saveHighScore();
+    void logError(const std::string& message);
 };
 
 #endif // GAME_H
