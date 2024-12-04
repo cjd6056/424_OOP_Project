@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "PlayerData.h" 
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
@@ -6,6 +7,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
+ 
 
 using namespace std;
 
@@ -143,8 +145,10 @@ void Game::update()
 
 void Game::play() 
 {
-    cout << "Welcome to Snake. Good luck!\nEnter your name: ";
+    // Ask the player for their name and add them to the PlayerData container
+    cout << "Welcome to Rocket Python. Good luck!\nEnter your name: ";
     cin >> playerName;
+    playerData.addPlayer(playerName);  // Add player to the container
 
     do 
     {
@@ -154,11 +158,13 @@ void Game::play()
         system("pause");
         system("cls");
 
+        // Hide console cursor for better visual experience during the game
         CONSOLE_CURSOR_INFO info;
         info.dwSize = 100;
         info.bVisible = false;
         SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 
+        // Main game loop
         while (!isGameOver) 
         {
             handleInput();
@@ -167,6 +173,8 @@ void Game::play()
                 update();
                 render();
                 Sleep(speedDelay);
+
+                // If score exceeds high score, save it
                 if (score > highScore) 
                 {
                     highScore = score;
@@ -181,13 +189,16 @@ void Game::play()
             }
         }
 
+        // Game over logic
         if (lives <= 0) 
         {
             cout << "\n\nGoodbye Cruel World! Press any key to continue...\n";
             _getch();
+
+            // Update high score if the current score exceeds it
             if (score > highScore) 
             {
-                highScore = score; 
+                highScore = score;
                 saveHighScore(); // Update high score before resetting score
             }
             cout << "\nGame Over! Your last score was: " << score;
@@ -196,14 +207,20 @@ void Game::play()
             lives = 3;
         }
 
+        // Display the high score
         cout << "\nHigh Score: " << highScore << endl;
 
-        // Increment games played after each game finishes
-        (*gamesPlayed)++;
+        // Increment the number of games played for the current player
+        int playerIndex = playerData.playerNames.size() - 1;  // Assuming the current player is the last one added
+        playerData.incrementGamesPlayed(playerIndex);
+
+        // Display player data after each game
+        playerData.displayPlayerData();
 
     } 
-    while (playAgain());
+    while (playAgain());  // Continue playing if the player chooses to
 }
+
 
 void Game::saveHighScore() 
 {
@@ -247,8 +264,6 @@ void Game::logError(const std::string& message)
         logFile.close();
     }
 }
-
-
 
 bool Game::playAgain() 
 {

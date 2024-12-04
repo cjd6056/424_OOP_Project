@@ -42,6 +42,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj: C:/Users/conor.CONORS-X
 CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Fuel.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Game.h \
+  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Snake.h \
   C:/msys64/ucrt64/include/_bsd_types.h \
   C:/msys64/ucrt64/include/_mingw.h \
@@ -102,6 +103,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/bits/requires_hosted.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/std_abs.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_algobase.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_bvector.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_construct.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_function.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_iterator.h \
@@ -109,6 +111,8 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_relops.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_uninitialized.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_vector.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/streambuf.tcc \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/streambuf_iterator.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/string_view.tcc \
@@ -116,6 +120,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/bits/uses_allocator.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/uses_allocator_args.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/utility.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/vector.tcc \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/version.h \
   C:/msys64/ucrt64/include/c++/14.1.0/cctype \
   C:/msys64/ucrt64/include/c++/14.1.0/cerrno \
@@ -156,6 +161,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/type_traits \
   C:/msys64/ucrt64/include/c++/14.1.0/typeinfo \
   C:/msys64/ucrt64/include/c++/14.1.0/utility \
+  C:/msys64/ucrt64/include/c++/14.1.0/vector \
   C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/basic_file.h \
   C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
@@ -468,6 +474,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj: C:/Users/conor.CONORS-
 CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/main.cpp \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Fuel.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Game.h \
+  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Snake.h \
   C:/msys64/ucrt64/include/_bsd_types.h \
   C:/msys64/ucrt64/include/_mingw.h \
@@ -529,6 +536,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/bits/std_abs.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_algo.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_algobase.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_bvector.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_construct.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_function.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_heap.h \
@@ -538,6 +546,8 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_relops.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_tempbuf.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_uninitialized.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_vector.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/streambuf.tcc \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/streambuf_iterator.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/string_view.tcc \
@@ -546,6 +556,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/bits/uses_allocator.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/uses_allocator_args.h \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/utility.h \
+  C:/msys64/ucrt64/include/c++/14.1.0/bits/vector.tcc \
   C:/msys64/ucrt64/include/c++/14.1.0/bits/version.h \
   C:/msys64/ucrt64/include/c++/14.1.0/cctype \
   C:/msys64/ucrt64/include/c++/14.1.0/cerrno \
@@ -586,6 +597,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/include/c++/14.1.0/type_traits \
   C:/msys64/ucrt64/include/c++/14.1.0/typeinfo \
   C:/msys64/ucrt64/include/c++/14.1.0/utility \
+  C:/msys64/ucrt64/include/c++/14.1.0/vector \
   C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -1050,6 +1062,12 @@ C:/msys64/ucrt64/include/c++/14.1.0/bits/ios_base.h:
 
 C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp:
 
+C:/msys64/ucrt64/include/psdk_inc/_ip_mreq1.h:
+
+C:/msys64/ucrt64/include/apisetcconv.h:
+
+C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h:
+
 C:/msys64/ucrt64/include/c++/14.1.0/bits/char_traits.h:
 
 C:/msys64/ucrt64/include/bemapiset.h:
@@ -1073,10 +1091,6 @@ C:/msys64/ucrt64/include/_mingw_stdarg.h:
 C:/msys64/ucrt64/include/_timeval.h:
 
 C:/msys64/ucrt64/include/apiset.h:
-
-C:/msys64/ucrt64/include/psdk_inc/_ip_mreq1.h:
-
-C:/msys64/ucrt64/include/apisetcconv.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/bits/alloc_traits.h:
 
@@ -1176,6 +1190,8 @@ C:/msys64/ucrt64/include/c++/14.1.0/bits/requires_hosted.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_algobase.h:
 
+C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_bvector.h:
+
 C:/msys64/ucrt64/include/sysinfoapi.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_construct.h:
@@ -1189,6 +1205,18 @@ C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_iterator_base_funcs.h:
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/vaesintrin.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_iterator_base_types.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/tsxldtrkintrin.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/pkuintrin.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/avx512vnniintrin.h:
+
+C:/msys64/ucrt64/include/c++/14.1.0/limits:
+
+C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_uninitialized.h:
+
+C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_vector.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/bits/streambuf.tcc:
 
@@ -1205,6 +1233,10 @@ C:/msys64/ucrt64/include/c++/14.1.0/bits/uses_allocator.h:
 C:/msys64/ucrt64/include/joystickapi.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/bits/uses_allocator_args.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h:
+
+C:/msys64/ucrt64/include/c++/14.1.0/bits/vector.tcc:
 
 C:/msys64/ucrt64/include/c++/14.1.0/cctype:
 
@@ -1262,14 +1294,6 @@ C:/msys64/ucrt64/include/c++/14.1.0/iostream:
 
 C:/msys64/ucrt64/include/c++/14.1.0/istream:
 
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/tsxldtrkintrin.h:
-
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/pkuintrin.h:
-
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/avx512vnniintrin.h:
-
-C:/msys64/ucrt64/include/c++/14.1.0/limits:
-
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/x86gprintrin.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/ostream:
@@ -1297,6 +1321,8 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/popcntintrin.h:
 C:/msys64/ucrt64/include/timezoneapi.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/typeinfo:
+
+C:/msys64/ucrt64/include/c++/14.1.0/vector:
 
 C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
@@ -1685,8 +1711,6 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/sm3intrin.h:
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/sm4intrin.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/smmintrin.h:
-
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/tbmintrin.h:
 

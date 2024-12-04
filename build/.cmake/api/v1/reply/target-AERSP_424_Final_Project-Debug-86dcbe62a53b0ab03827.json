@@ -94,10 +94,10 @@
 			},
 			"sourceIndexes" : 
 			[
-				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -136,17 +136,18 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -160,6 +161,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Include/Game.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Include/PlayerData.h",
 			"sourceGroupIndex" : 0
 		},
 		{
