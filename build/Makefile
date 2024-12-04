@@ -128,29 +128,29 @@ AERSP_424_Final_Project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/build
 .PHONY : AERSP_424_Final_Project/fast
 
-src/Fruit.obj: src/Fruit.cpp.obj
-.PHONY : src/Fruit.obj
+src/Fuel.obj: src/Fuel.cpp.obj
+.PHONY : src/Fuel.obj
 
 # target to build an object file
-src/Fruit.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj
-.PHONY : src/Fruit.cpp.obj
+src/Fuel.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj
+.PHONY : src/Fuel.cpp.obj
 
-src/Fruit.i: src/Fruit.cpp.i
-.PHONY : src/Fruit.i
+src/Fuel.i: src/Fuel.cpp.i
+.PHONY : src/Fuel.i
 
 # target to preprocess a source file
-src/Fruit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.i
-.PHONY : src/Fruit.cpp.i
+src/Fuel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.i
+.PHONY : src/Fuel.cpp.i
 
-src/Fruit.s: src/Fruit.cpp.s
-.PHONY : src/Fruit.s
+src/Fuel.s: src/Fuel.cpp.s
+.PHONY : src/Fuel.s
 
 # target to generate assembly for a file
-src/Fruit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.s
-.PHONY : src/Fruit.cpp.s
+src/Fuel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AERSP_424_Final_Project.dir\build.make CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.s
+.PHONY : src/Fuel.cpp.s
 
 src/Game.obj: src/Game.cpp.obj
 .PHONY : src/Game.obj
@@ -233,9 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AERSP_424_Final_Project
-	@echo ... src/Fruit.obj
-	@echo ... src/Fruit.i
-	@echo ... src/Fruit.s
+	@echo ... src/Fuel.obj
+	@echo ... src/Fuel.i
+	@echo ... src/Fuel.s
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s

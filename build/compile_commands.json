@@ -1,9 +1,9 @@
 [
 {
   "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG -D_USE_MATH_DEFINES @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Fruit.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Fruit.cpp",
-  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fruit.cpp",
-  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DDEBUG -D_USE_MATH_DEFINES @CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AERSP_424_Final_Project.dir\\src\\Fuel.cpp.obj -c C:\\Users\\conor.CONORS-XPS-15\\OneDrive\\Desktop\\Repos\\424_OOP_Project\\src\\Fuel.cpp",
+  "file": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fuel.cpp",
+  "output": "CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj"
 },
 {
   "directory": "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/build",

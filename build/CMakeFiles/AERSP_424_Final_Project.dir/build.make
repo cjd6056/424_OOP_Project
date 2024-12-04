@@ -68,20 +68,20 @@ include CMakeFiles/AERSP_424_Final_Project.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AERSP_424_Final_Project.dir/flags.make
 
-CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/flags.make
-CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp
-CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj: C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fruit.cpp
-CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj -MF CMakeFiles\AERSP_424_Final_Project.dir\src\Fruit.cpp.obj.d -o CMakeFiles\AERSP_424_Final_Project.dir\src\Fruit.cpp.obj -c C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\src\Fruit.cpp
+CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/flags.make
+CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp
+CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj: C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fuel.cpp
+CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj -MF CMakeFiles\AERSP_424_Final_Project.dir\src\Fuel.cpp.obj.d -o CMakeFiles\AERSP_424_Final_Project.dir\src\Fuel.cpp.obj -c C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\src\Fuel.cpp
 
-CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\src\Fruit.cpp > CMakeFiles\AERSP_424_Final_Project.dir\src\Fruit.cpp.i
+CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\src\Fuel.cpp > CMakeFiles\AERSP_424_Final_Project.dir\src\Fuel.cpp.i
 
-CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\src\Fruit.cpp -o CMakeFiles\AERSP_424_Final_Project.dir\src\Fruit.cpp.s
+CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\conor.CONORS-XPS-15\OneDrive\Desktop\Repos\424_OOP_Project\src\Fuel.cpp -o CMakeFiles\AERSP_424_Final_Project.dir\src\Fuel.cpp.s
 
 CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/flags.make
 CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: CMakeFiles/AERSP_424_Final_Project.dir/includes_CXX.rsp
@@ -130,7 +130,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.s: cmake_force
 
 # Object files for target AERSP_424_Final_Project
 AERSP_424_Final_Project_OBJECTS = \
-"CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj" \
+"CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj" \
 "CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj" \
 "CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj" \
 "CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj"
@@ -138,7 +138,7 @@ AERSP_424_Final_Project_OBJECTS = \
 # External object files for target AERSP_424_Final_Project
 AERSP_424_Final_Project_EXTERNAL_OBJECTS =
 
-AERSP_424_Final_Project.exe: CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj
+AERSP_424_Final_Project.exe: CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj
 AERSP_424_Final_Project.exe: CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj
 AERSP_424_Final_Project.exe: CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj
 AERSP_424_Final_Project.exe: CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj

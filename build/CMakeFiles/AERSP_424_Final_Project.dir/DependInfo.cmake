@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fruit.cpp" "CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj" "gcc" "CMakeFiles/AERSP_424_Final_Project.dir/src/Fruit.cpp.obj.d"
+  "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Fuel.cpp" "CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj" "gcc" "CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj.d"
   "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp" "CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj" "gcc" "CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj.d"
   "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Snake.cpp" "CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj" "gcc" "CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj.d"
   "C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/main.cpp" "CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj" "gcc" "CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj.d"

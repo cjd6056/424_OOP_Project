@@ -5,6 +5,7 @@
 #include <limits>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 
 using namespace std;
 
@@ -189,6 +190,8 @@ void Game::play()
 
     } 
     while (playAgain());
+
+    
 }
 
 bool Game::playAgain() 
