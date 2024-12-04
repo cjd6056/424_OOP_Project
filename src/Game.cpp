@@ -161,7 +161,11 @@ void Game::play()
                 update();
                 render();
                 Sleep(speedDelay);
-                if (score > highScore) highScore = score;
+                if (score > highScore) 
+                {
+                    highScore = score;
+                    saveHighScore(); // Save immediately when a new high score is achieved
+                }
             } 
             else 
             {
@@ -175,14 +179,17 @@ void Game::play()
         {
             cout << "\n\nGoodbye Cruel World! Press any key to continue...\n";
             _getch();
-                if (score > highScore) highScore = score; // Update high score before resetting score
-                cout << "\nGame Over! Your last score was: " << score;
+            if (score > highScore) 
+            {
+                highScore = score; 
+                saveHighScore(); // Update high score before resetting score
+            }
+            cout << "\nGame Over! Your last score was: " << score;
             score = 0;
             funMode = false;
             lives = 3;
         }
 
-        
         cout << "\nHigh Score: " << highScore << endl;
 
         // Increment games played after each game finishes
@@ -190,9 +197,43 @@ void Game::play()
 
     } 
     while (playAgain());
-
-    
 }
+
+
+void Game::saveHighScore() 
+{
+    // Check if a high score file already exists and read the previous high score
+    int previousHighScore = 0;
+    std::ifstream inFile("High_Score_Legends.txt", std::ios::in);
+    if (inFile) 
+    {
+        std::string line;
+        while (std::getline(inFile, line)) 
+        {
+            if (line.find("High Score:") != std::string::npos) 
+            {
+                // Extract the high score from the line
+                previousHighScore = std::stoi(line.substr(line.find(":") + 1));
+                break;
+            }
+        }
+        inFile.close();
+    }
+
+    // Compare the current high score with the previous high score
+    if (highScore > previousHighScore) 
+    {
+        std::ofstream outFile("High_Score_Legends.txt", std::ios::out);
+        if (outFile) 
+        {
+            outFile << "🏆 Only Legends Are Listed Here 🏆\n";
+            outFile << "High Score: " << highScore <<  "\tUser: " << playerName << "\n";
+            outFile.close();
+        }
+    }
+}
+
+
 
 bool Game::playAgain() 
 {

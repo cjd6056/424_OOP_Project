@@ -26,6 +26,7 @@ public:
     void play();
     bool playAgain();
     void incrementGamesPlayed();  // Function to update games played
+    void saveHighScore();
 };
 
 #endif // GAME_H
