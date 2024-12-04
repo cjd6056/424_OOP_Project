@@ -153,7 +153,11 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/14.1.0/istream \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/istream.tcc \
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/GameMode.h \
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/PlayerData.h \
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/GameMode.h \
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/ClassicGameMode.h \
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/EndlessGameMode.h \
  C:/msys64/ucrt64/include/conio.h \
  C:/msys64/ucrt64/include/sec_api/conio_s.h \
  C:/msys64/ucrt64/include/windows.h C:/msys64/ucrt64/include/sdkddkver.h \

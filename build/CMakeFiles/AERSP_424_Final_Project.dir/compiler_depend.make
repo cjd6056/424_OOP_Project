@@ -40,8 +40,11 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj: C:/Users/conor.CONORS-X
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/syslimits.h
 
 CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj: C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp \
+  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/ClassicGameMode.h \
+  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/EndlessGameMode.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Fuel.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Game.h \
+  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/GameMode.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Snake.h \
   C:/msys64/ucrt64/include/_bsd_types.h \
@@ -474,6 +477,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Snake.cpp.obj: C:/Users/conor.CONORS-
 CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/main.cpp \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Fuel.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Game.h \
+  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/GameMode.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h \
   C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Snake.h \
   C:/msys64/ucrt64/include/_bsd_types.h \
@@ -1062,6 +1066,22 @@ C:/msys64/ucrt64/include/c++/14.1.0/bits/ios_base.h:
 
 C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp:
 
+C:/msys64/ucrt64/include/rpcdcep.h:
+
+C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++io.h:
+
+C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/ClassicGameMode.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/uintrintrin.h:
+
+C:/msys64/ucrt64/include/nb30.h:
+
+C:/msys64/ucrt64/include/namedpipeapi.h:
+
+C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/EndlessGameMode.h:
+
+C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/GameMode.h:
+
 C:/msys64/ucrt64/include/psdk_inc/_ip_mreq1.h:
 
 C:/msys64/ucrt64/include/apisetcconv.h:
@@ -1330,10 +1350,6 @@ C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/basic_file.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
-C:/msys64/ucrt64/include/rpcdcep.h:
-
-C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++io.h:
-
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/cetintrin.h:
 
 C:/msys64/ucrt64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++locale.h:
@@ -1417,12 +1433,6 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/avx512vbmivlintrin.h:
 C:/msys64/ucrt64/include/stddef.h:
 
 C:/msys64/ucrt64/include/mmsyscom.h:
-
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/uintrintrin.h:
-
-C:/msys64/ucrt64/include/nb30.h:
-
-C:/msys64/ucrt64/include/namedpipeapi.h:
 
 C:/msys64/ucrt64/include/objbase.h:
 

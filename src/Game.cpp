@@ -1,5 +1,8 @@
 #include "Game.h"
-#include "PlayerData.h" 
+#include "PlayerData.h"
+#include "GameMode.h"
+#include "ClassicGameMode.h"
+#include "EndlessGameMode.h"
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
@@ -150,6 +153,10 @@ void Game::play()
     cin >> playerName;
     playerData.addPlayer(playerName);  // Add player to the container
 
+// Let's assume the user selects Endless mode for this example
+    bool isEndless = true;  // You can change this flag or make it dynamic based on user input
+    setGameMode(isEndless);
+
     do 
     {
         lives = 3;
@@ -217,10 +224,32 @@ void Game::play()
         // Display player data after each game
         playerData.displayPlayerData();
 
+        endGame(); // End selected Game Mode
+
     } 
     while (playAgain());  // Continue playing if the player chooses to
 }
 
+void Game::setGameMode(bool isEndless) {
+    // Create the appropriate game mode based on the flag
+    if (isEndless) {
+        currentGameMode = new EndlessGameMode();
+    } else {
+        currentGameMode = new ClassicGameMode();
+    }
+}
+
+void Game::startGame() {
+    if (currentGameMode) {
+        currentGameMode->startGame();  // Start the selected game mode
+    }
+}
+
+void Game::endGame() {
+    if (currentGameMode) {
+        currentGameMode->endGame();  // End the selected game mode
+    }
+}
 
 void Game::saveHighScore() 
 {

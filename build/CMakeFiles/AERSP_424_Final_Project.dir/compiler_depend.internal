@@ -42,8 +42,11 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/Fuel.cpp.obj
 
 CMakeFiles/AERSP_424_Final_Project.dir/src/Game.cpp.obj
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/Game.cpp
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/ClassicGameMode.h
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/EndlessGameMode.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Fuel.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Game.h
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/GameMode.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Snake.h
  C:/msys64/ucrt64/include/_bsd_types.h
@@ -478,6 +481,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/src/main.cpp
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Fuel.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Game.h
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/GameMode.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/PlayerData.h
  C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/Include/Snake.h
  C:/msys64/ucrt64/include/_bsd_types.h

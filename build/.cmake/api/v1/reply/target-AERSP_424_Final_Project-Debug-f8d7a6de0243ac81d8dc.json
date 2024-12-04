@@ -94,10 +94,10 @@
 			},
 			"sourceIndexes" : 
 			[
-				4,
-				5,
-				6,
-				7
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
@@ -137,22 +137,35 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4,
+				5,
+				6
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				4,
-				5,
-				6,
-				7
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"path" : "Include/ClassicGameMode.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Include/EndlessGameMode.h",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"path" : "Include/Fuel.h",
@@ -161,6 +174,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Include/Game.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Include/GameMode.h",
 			"sourceGroupIndex" : 0
 		},
 		{

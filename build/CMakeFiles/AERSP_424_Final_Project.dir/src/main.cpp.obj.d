@@ -356,6 +356,7 @@ CMakeFiles/AERSP_424_Final_Project.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/14.1.0/istream \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/istream.tcc \
+ C:/Users/conor.CONORS-XPS-15/OneDrive/Desktop/Repos/424_OOP_Project/include/GameMode.h \
  C:/msys64/ucrt64/include/c++/14.1.0/algorithm \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/algorithmfwd.h \
