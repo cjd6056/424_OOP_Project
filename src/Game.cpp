@@ -91,7 +91,9 @@ void Game::setDifficulty()
             break;
         speedDelay = 50; break;
     }
-    cout << "Speed Delay: " << speedDelay << " ms" << endl;
+     cout << "\nTip: Use the UP, DOWN, LEFT, and RIGHT arrow keys to move the rocket. Good luck!\n";
+
+    //cout << "Speed Delay: " << speedDelay << " ms" << endl; // for debugging
 }
 
 void Game::handleInput() 
@@ -149,7 +151,7 @@ void Game::update()
 void Game::play() 
 {
     // Ask the player for their name and add them to the PlayerData container
-    cout << "Welcome to Rocket Python. Good luck!\nEnter your name: ";
+    cout << "Welcome to Rocket Python! \nEnter your name here: ";
     cin >> playerName;
     playerData.addPlayer(playerName);  // Add player to the container
 
