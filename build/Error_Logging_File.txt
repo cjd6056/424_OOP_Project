@@ -1,0 +1,6 @@
+ERROR: Invalid difficulty selection. User entered a non-numeric value. | Timestamp: Dec  5 2024 16:38:52
+ERROR: Invalid difficulty selection. User entered: 0 | Timestamp: Dec  5 2024 16:38:52
+ERROR: Invalid difficulty selection. User entered a non-numeric value. | Timestamp: Dec  5 2024 16:38:52
+ERROR: Invalid difficulty selection. User entered: 0 | Timestamp: Dec  5 2024 16:38:52
+ERROR: Invalid difficulty selection. User entered a non-numeric value. | Timestamp: Dec  5 2024 16:38:52
+ERROR: Invalid difficulty selection. User entered: 0 | Timestamp: Dec  5 2024 16:38:52

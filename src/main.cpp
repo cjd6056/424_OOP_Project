@@ -29,7 +29,8 @@ int main()
 
     // Create a variable to track the number of games played
     int gamesPlayed = 0;
-
+    
+    //Code that helps with rendering issues. Found in 
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(width), static_cast<SHORT>(height) };
     SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
